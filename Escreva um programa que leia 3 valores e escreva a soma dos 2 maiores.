@@ -1,0 +1,42 @@
+#include <iostream>
+
+int main() {
+    int a, b, c;
+    int maior1, maior2;
+
+    // Solicita os três valores ao usuário
+    std::cout << "Digite três números inteiros: ";
+    std::cin >> a >> b >> c;
+
+    // Determina os dois maiores números
+    if (a >= b && a >= c) {
+        maior1 = a;
+        if (b >= c) {
+            maior2 = b;
+        } else {
+            maior2 = c;
+        }
+    } else if (b >= a && b >= c) {
+        maior1 = b;
+        if (a >= c) {
+            maior2 = a;
+        } else {
+            maior2 = c;
+        }
+    } else {
+        maior1 = c;
+        if (a >= b) {
+            maior2 = a;
+        } else {
+            maior2 = b;
+        }
+    }
+
+    // Calcula a soma dos dois maiores números
+    int somaDosMaiores = maior1 + maior2;
+
+    // Imprime a soma dos dois maiores números
+    std::cout << "A soma dos dois maiores números é: " << somaDosMaiores << std::endl;
+
+    return 0;
+}
