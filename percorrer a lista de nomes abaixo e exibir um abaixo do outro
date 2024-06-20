@@ -1,0 +1,17 @@
+#include <iostream>
+#include <string> 
+
+int main() {
+    std::string nomes[] = {
+        "Ana", "Bruno", "Carla", "Daniel", "Eva",
+        "Felipe", "Gabriela", "Hugo", "Isabela", "João",
+        "Lara", "Miguel", "Nina", "Otávio", "Paula",
+        "Ricardo", "Sofia", "Tiago", "Úrsula", "Vitor"
+    };
+
+    for (int i = 0; i < 20; ++i) {
+        std::cout << nomes[i] << std::endl;
+    }
+
+    return 0;
+}
