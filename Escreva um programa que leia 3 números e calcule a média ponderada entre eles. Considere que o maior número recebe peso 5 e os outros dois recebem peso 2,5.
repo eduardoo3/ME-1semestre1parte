@@ -1,0 +1,28 @@
+#include <iostream>
+
+int main() {
+    float num1, num2, num3;
+    float mediaPonderada;
+
+    // Solicita os três números ao usuário
+    std::cout << "Digite três números: ";
+    std::cin >> num1 >> num2 >> num3;
+
+    // Determina qual é o maior número
+    float maior;
+    if (num1 >= num2 && num1 >= num3) {
+        maior = num1;
+    } else if (num2 >= num1 && num2 >= num3) {
+        maior = num2;
+    } else {
+        maior = num3;
+    }
+
+    // Calcula a média ponderada
+    mediaPonderada = (maior * 5 + (num1 + num2 + num3 - maior) * 2.5) / 3;
+
+    // Imprime a média ponderada
+    std::cout << "A média ponderada é: " << mediaPonderada << std::endl;
+
+    return 0;
+}
